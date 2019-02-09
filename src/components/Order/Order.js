@@ -4,7 +4,11 @@ import OrderItem from './OrderItem/OrderItem'
 function Order(props){
     return(
         <div>
-            <OrderItem name='coffee' price={20} count={3} />
+            Order Details:
+            {props.items.map(
+                item => <OrderItem name={item.name} price={item.price} count={item.count} />
+            )}
+
         </div>
     );
 }
