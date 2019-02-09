@@ -3,7 +3,7 @@ import React from 'react';
 function Item(props){
     return(
         <div>
-            [{props.name}]: ${props.price}
+            <button>[{props.name}]: ${props.price}</button>
         </div>
     );
 }

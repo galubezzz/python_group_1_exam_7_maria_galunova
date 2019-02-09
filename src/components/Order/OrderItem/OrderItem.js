@@ -3,7 +3,7 @@ import React from 'react';
 function OrderItem(props){
     return(
         <div>
-           <button>{props.name}{props.price}{props.count}</button>
+           {props.name}: {props.count}шт x ${props.price}
         </div>
     );
 }
