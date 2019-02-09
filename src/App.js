@@ -35,11 +35,22 @@ class App extends Component {
         this.setState({items: newItems});
     };
 
+    removeItem = (name) => {
+        const newItems = this.state.items.map(theItem => {
+            if (theItem.name === name){
+                theItem.count -= 1;
+                theItem.total = theItem.count * availableItems.find(item => item.name === theItem.name).price;
+            }
+            return theItem;
+        });
+        this.setState({items: newItems});
+    };
+
     render() {
         return (
             <div className="App">
                 <ItemsForm items={availableItems} addItem={this.addItem}/>
-                <Order items={this.state.items}/>
+                <Order items={this.state.items} removeItem={this.removeItem}/>
             </div>
         );
   }

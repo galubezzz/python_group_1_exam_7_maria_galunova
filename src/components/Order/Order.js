@@ -6,7 +6,7 @@ function Order(props){
         <div>
             Order Details:
             {props.items.map(
-                item => <OrderItem name={item.name} price={item.price} count={item.count} />
+                item => <OrderItem name={item.name} price={item.price} count={item.count} removeItem ={()=>{props.removeItem(item.name)}}/>
             )}
 
         </div>
