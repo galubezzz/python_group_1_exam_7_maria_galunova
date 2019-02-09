@@ -22,14 +22,26 @@ class App extends Component {
       {name: 'avocado', count: 0, total: 0},
       {name: 'sesame', count: 0, total: 0}
     ],
-    totalPrice: 0 }
-    render() {
-    return (
-        <div className="App">
-            <ItemsForm items={availableItems}/>
-        </div>
+    totalPrice: 0 };
 
-    );
+    addItem = (name) => {
+        const newItems = this.state.items.map(theItem => {
+            if (theItem.name === name){
+                theItem.count += 1;
+                theItem.total = theItem.count * availableItems.find(item => item.name === theItem.name).price;
+            }
+            return theItem;
+        });
+        this.setState({items: newItems});
+    };
+
+    render() {
+        return (
+            <div className="App">
+                <ItemsForm items={availableItems} addItem={this.addItem}/>
+                <Order items={this.state.items}/>
+            </div>
+        );
   }
 }
 
