@@ -22,7 +22,7 @@ class App extends Component {
       {name: 'avocado', count: 0, total: 0},
       {name: 'sesame', count: 0, total: 0}
     ],
-    totalPrice: 0 };
+    totalPrice: null };
 
     addItem = (name) => {
         const newItems = this.state.items.map(theItem => {

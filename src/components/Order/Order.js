@@ -3,7 +3,10 @@ import OrderItem from './OrderItem/OrderItem'
 
 function Order(props){
     const newItems = props.items.filter(item => item.count>0);
-    return(
+    let message = "Please select the ingredients for your Poke!";
+
+    if (newItems.length>0){
+        return(
         <div>
             Order Details:
             {newItems.map(
@@ -12,6 +15,15 @@ function Order(props){
             Total: {props.total}
         </div>
     );
+    }
+    else {
+        return(
+            <div>
+                {message}
+            </div>
+        )
+
+    }
 }
 
 export default Order;
