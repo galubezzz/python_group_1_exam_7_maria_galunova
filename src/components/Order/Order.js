@@ -10,7 +10,7 @@ function Order(props){
         <div className="col-md-6 rounded border border-dark block">
             Order Details:
             {newItems.map(
-                item => <OrderItem name={item.name} price={item.price} count={item.count} removeItem ={()=>{props.removeItem(item.name)}} />
+                item => <OrderItem name={item.name} total={item.total} count={item.count} removeItem ={()=>{props.removeItem(item.name)}} />
             )}
             Total: {props.total}
         </div>
