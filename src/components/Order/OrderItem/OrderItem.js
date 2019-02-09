@@ -1,9 +1,11 @@
 import React from 'react';
 
 function OrderItem(props){
-    <div>
-        {props.name}{props.price}{props.count}
-    </div>
+    return(
+        <div>
+           <button>{props.name}{props.price}{props.count}</button>
+        </div>
+    );
 }
 
 export default OrderItem;
