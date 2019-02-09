@@ -3,7 +3,7 @@ import Item from './Item/Item'
 
 function ItemsForm(props){
     return(
-         <div>
+         <div className="col-md-6">
              {props.items.map(item => <Item name = {item.label} price = {item.price} addItem={() => {props.addItem(item.name)}}/>)}
         </div>
         );

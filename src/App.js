@@ -60,8 +60,10 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <ItemsForm items={availableItems} addItem={this.addItem}/>
-                <Order items={this.state.items} removeItem={this.removeItem} total={this.state.totalPrice}/>
+                <div className='row'>
+                    <ItemsForm items={availableItems} addItem={this.addItem}/>
+                    <Order items={this.state.items} removeItem={this.removeItem} total={this.state.totalPrice}/>
+                </div>
             </div>
         );
   }

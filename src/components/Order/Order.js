@@ -7,7 +7,7 @@ function Order(props){
 
     if (newItems.length>0){
         return(
-        <div>
+        <div className="col-md-6">
             Order Details:
             {newItems.map(
                 item => <OrderItem name={item.name} price={item.price} count={item.count} removeItem ={()=>{props.removeItem(item.name)}} />
@@ -18,7 +18,7 @@ function Order(props){
     }
     else {
         return(
-            <div>
+            <div className="col-md-6">
                 {message}
             </div>
         )
