@@ -33,6 +33,7 @@ class App extends Component {
             return theItem;
         });
         this.setState({items: newItems});
+        this.countTotal();
     };
 
     removeItem = (name) => {
@@ -44,13 +45,23 @@ class App extends Component {
             return theItem;
         });
         this.setState({items: newItems});
+        this.countTotal();
     };
+
+    countTotal = () => {
+        let items = [...this.state.items];
+        let price = items.reduce(function (sum, ing) {
+            return sum + ing.total;}, 0);
+        this.setState({totalPrice: price});
+      };
+
+
 
     render() {
         return (
             <div className="App">
                 <ItemsForm items={availableItems} addItem={this.addItem}/>
-                <Order items={this.state.items} removeItem={this.removeItem}/>
+                <Order items={this.state.items} removeItem={this.removeItem} total={this.state.totalPrice}/>
             </div>
         );
   }
