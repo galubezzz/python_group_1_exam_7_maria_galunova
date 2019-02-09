@@ -4,12 +4,12 @@ import Order from './components/Order/Order';
 import ItemsForm from './components/ItemsForm/ItemsForm';
 
 const availableItems = [
-  {name: 'rice', price: 80, label: 'Рис'},
-  {name: 'salad', price: 70, label: 'Салат'},
-  {name: 'tuna', price: 90, label: 'Тунец'},
-  {name: 'salmon', price: 50, label: 'Лосось'},
-  {name: 'avocado', price: 45, label: 'Авокадо'},
-  {name: 'sesame', price: 40, label: 'Кунжут'}
+  {name: 'rice', price: 3, label: 'Рис'},
+  {name: 'salad', price: 2, label: 'Салат'},
+  {name: 'tuna', price: 5, label: 'Тунец'},
+  {name: 'salmon', price: 5, label: 'Лосось'},
+  {name: 'avocado', price: 2, label: 'Авокадо'},
+  {name: 'sesame', price: 1, label: 'Кунжут'}
 ];
 
 class App extends Component {
