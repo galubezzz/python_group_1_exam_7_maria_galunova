@@ -7,18 +7,18 @@ function Order(props){
 
     if (newItems.length>0){
         return(
-        <div className="col-md-6 rounded border border-dark block">
+        <div className="col-md-5 form-group rounded border border-dark block">
             Order Details:
             {newItems.map(
                 item => <OrderItem name={item.name} total={item.total} count={item.count} removeItem ={()=>{props.removeItem(item.name)}} />
             )}
-            Total: {props.total}
+            Total: ${props.total}
         </div>
     );
     }
     else {
         return(
-            <div className="col-md-6 rounded border border-dark block">
+            <div className="col-md-5 form-group rounded border border-dark block">
                 {message}
             </div>
         )
