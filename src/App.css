@@ -33,6 +33,7 @@
 }
 .btn {
   width: 160px;
+  margin: 5px;
 }
 @keyframes App-logo-spin {
   from {

@@ -7,7 +7,7 @@ function OrderItem(props){
     }
     return(
         <div>
-           {props.name}: {props.count}шт x ${price} = {props.total} <span onClick={props.removeItem}><i className="fas fa-trash-alt"></i></span>
+           {props.label()}: {props.count}шт x ${price} = {props.total} <span onClick={props.removeItem}><i className="fas fa-trash-alt"></i></span>
         </div>
     );
 }
